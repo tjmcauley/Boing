@@ -6,12 +6,13 @@ package com.example.boingv4;
  * @author Thomas McAuley (2110735)
  * Last Modified - 24/02/2022
  * Copyrighted
- *
+ * <p>
  * A class that reads a .txt shape file and creates a shape object based on that
  * data, which will be enqueued
  */
 
 import javafx.scene.paint.Color;
+
 import java.io.*;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -29,21 +30,16 @@ public class ReadShapeFile {
         while (in.hasNext()) {
             String shapeType = in.next();
 
-            try {
-                if (shapeType.equals("circle")) {
-                    readCircle(shapeQueue, in);
-                } else if (shapeType.equals("oval")) {
-                    readOval(shapeQueue, in);
-                } else if (shapeType.equals("square")) {
-                    readSquare(shapeQueue, in);
-                } else if (shapeType.equals("rect")) {
-                    readRect(shapeQueue, in);
-                } else if (shapeType.equals("triangle")) {
-                    readTriangle(shapeQueue, in);
-
-                }
-            } catch (NoSuchElementException e) {
-                System.out.println("That isn't a valid shape");
+            if (shapeType.equals("circle")) {
+                readCircle(shapeQueue, in);
+            } else if (shapeType.equals("oval")) {
+                readOval(shapeQueue, in);
+            } else if (shapeType.equals("square")) {
+                readSquare(shapeQueue, in);
+            } else if (shapeType.equals("rect")) {
+                readRect(shapeQueue, in);
+            } else if (shapeType.equals("triangle")) {
+                readTriangle(shapeQueue, in);
             }
         }
 

@@ -1,0 +1,4 @@
+beluga 0 20 20 -5 1 true 50 80 255 255 0
+square 0 220 20 1 -2 true 50 0 0 0
+bazinga 0 220 20 1 -2 true 50 0 0 0
+triangle 1000 100 100 -1 1 false 20 20 0 255 0
