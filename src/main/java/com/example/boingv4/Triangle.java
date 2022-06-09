@@ -105,8 +105,8 @@ public class Triangle extends ClosedShape {
      * @param g The graphics object associated with the drawing component.
      */
     public void draw(GraphicsContext g) {
-        xCoords = new double[] {x + getWidth(), x + getWidth(), x};
-        yCoords = new double[] {y + getHeight(), y, y + (height / 2)};
+        xCoords = new double[] {x, x + getWidth(), x + getWidth()};
+        yCoords = new double[] {y + (height / 2), y, y + getHeight()};
 
         g.setFill(colour);
         g.setStroke(colour);
